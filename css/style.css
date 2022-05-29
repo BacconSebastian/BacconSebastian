@@ -34,6 +34,7 @@ header{
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -59,7 +60,7 @@ nav{
     padding: 2rem;
     justify-content: space-between;
     align-items: center;
-    height: 8.1vh;
+    height: 8vh;
     z-index: 100;
 }
 nav a{
@@ -74,25 +75,48 @@ nav a:hover{
     color: var(--first-color);
     border-bottom: 1px solid var(--first-color);
 }
-nav.active{
+.corrector_nav{
+    opacity: 0;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 8vh;
+    background-color: var(--third_color);
+    display: flex;
+    color: var(--second_color);
+    padding: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    z-index: 100;
 }
-.corrector_nav{
-    display: none;
-    height: 8.1vh;
-    background-color: var(--second_color);
+.corrector_nav a{
+    color: var(--second_color);
+    font-size: 1.25rem;
+    font-weight: 400;
+    border-bottom: 1px solid var(--third_color);
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.corrector_nav a:hover{
+    color: var(--first-color);
+    border-bottom: 1px solid var(--first-color);
 }
 .corrector_nav.active{
-    display: block;
+    opacity: 1;
 }
 @media (min-width:1024px) {
     nav{
         padding: 2rem 12rem;
     }
     nav a{
+        font-size: 2rem;
+    }
+    .corrector_nav{
+        padding: 2rem 12rem;
+    }
+    .corrector_nav a{
         font-size: 2rem;
     }
 }
@@ -228,7 +252,7 @@ nav.active{
     0%, 10%, 100% {width: 0;}
     10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {border-right-color: transparent;}
     11%,21%,31%,41%,51%,61%,71%,81%,91% {border-right-color: var(--third_color);}
-    60%, 80% {width: 60%;}
+    60%, 80% {width: 80%;}
 }
 @media (min-width:1024px) {
     .loader{
@@ -242,7 +266,7 @@ nav.active{
         0%, 10%, 100% {width: 0;}
         10%,20%,30%,40%,50%,60%,70%,80%,90%,100% {border-right-color: transparent;}
         11%,21%,31%,41%,51%,61%,71%,81%,91% {border-right-color: var(--third_color);}
-        60%, 80% {width: 70%;}
+        60%, 80% {width: 100%;}
     }
 }
 
@@ -304,6 +328,9 @@ nav.active{
     z-index: 10;
     transition: all .4s;
     background-color: #fff;
+}
+.card:hover{
+    box-shadow: 0px 15px 20px var(--first-color);
 }
 .card:hover div {
     transform: translateY(-30px);
@@ -523,5 +550,88 @@ button:active {
     }
     .contactos:hover .button-text {
         color: var(--third_color);
+    }
+}
+
+/* Scroll header */
+
+.scrolldown {
+    --sizeX: 30px;
+    --sizeY: 50px;
+    position: relative;
+    width: var(--sizeX);
+    height: var(--sizeY);
+    margin-left: var(sizeX / 2);
+    border: calc(var(--sizeX) / 10) solid var(--first-color);
+    border-radius: 50px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    cursor: pointer;
+    margin-top: 8rem;
+}
+.scrolldown::before {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: var(--first-color);
+    border-radius: 100%;
+    animation: scrolldown-anim 2s infinite;
+    box-sizing: border-box;
+    box-shadow: 0px -5px 3px 1px #2a547066;
+}
+@keyframes scrolldown-anim {
+    0% {
+        opacity: 0;
+        height: 6px;
+    }
+    40% {
+        opacity: 1;
+        height: 10px;
+    }
+    80% {
+        transform: translate(0, 20px);
+        height: 10px;
+        opacity: 0;
+    }
+    100% {
+        height: 3px;
+        opacity: 0;
+    }
+}
+.chevrons {
+    padding: 6px 0 0 0;
+    margin-left: -3px;
+    margin-top: 48px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chevrondown {
+    margin-top: -6px;
+    position: relative;
+    border: solid var(--first-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+}
+.chevrondown:nth-child(odd) {
+    animation: pulse54012 500ms ease infinite alternate;
+}
+.chevrondown:nth-child(even) {
+    animation: pulse54012 500ms ease infinite alternate 250ms;
+}
+@keyframes pulse54012 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
     }
 }
