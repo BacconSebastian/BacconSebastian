@@ -1,4 +1,5 @@
-# 💫 About Me:
+# Sebastian Baccon, Fullstack Developer:
+
 ¡Hola 👋! Soy Sebastián, estudiante avanzado en Tecnicatura Superior en Sistemas y apasionado por el Desarrollo Web 😄. Actualmente me encuentro trabajando full-time en ABS-TI, dispuesto a escuchar nuevas propuestas.<br><br>Mis especialidades son:<br><br>💡 React.js (+Redux)<br>💡 Node.js (+Express)<br>💡 SQL (MySQL y PostgreSQL)<br>💡 JavaScript (ES6)<br><br><br>🔧 También tengo sólidos conocimientos en: Angular, Typescript, React Native, NextJS, MySQL, CSS (Bootstrap, Sass, Styled Components), Pyhton, Java, Git, entre otros.<br><br>🔧 Soft skills: Trabajo en equipo, comunicación, proactividad, compromiso, adaptación, resiliencia.<br><br><br>🖥️ ¿Por qué yo? Soy un desarrollador que le gusta trabajar en equipo, aprender de sus compañeros y cuento con la capacidad de resolver los problemas que se me presenten con las herramientas que conozco o encontrar otras de ser necesario. Puedo desempeñarme tanto en el Backend como en el Frontend.<br><br><br>💼 Github: github.com/BacconSebastian<br>📩 Gmail: bacconsebastian@gmail.com<br>📱 Tel: +54 11 33639537
 
 
